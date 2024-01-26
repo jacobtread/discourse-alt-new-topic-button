@@ -1,11 +1,10 @@
 /* global settings */
 
 import Component from "@glimmer/component";
-import { cached } from '@glimmer/tracking';
+import { cached } from "@glimmer/tracking";
 import { action } from "@ember/object";
 
 export default class AltNewTopicButton extends Component {
-
   // Cached parsing of the alternative link data
   @cached
   get alternativeLinks() {
@@ -21,7 +20,9 @@ export default class AltNewTopicButton extends Component {
       return undefined;
     }
 
-    return this.alternativeLinks.find((link) => link.category === category.slug);
+    return this.alternativeLinks.find(
+      (link) => link.category === category.slug
+    );
   }
 
   // Handle whether the button should be shown
@@ -36,7 +37,9 @@ export default class AltNewTopicButton extends Component {
 
   /// Retrieve the text for the button
   get label() {
-    return this.buttonData.text.length > 0 ? this.buttonData.text : "Alt New Topic";
+    return this.buttonData.text.length > 0
+      ? this.buttonData.text
+      : "Alt New Topic";
   }
 
   /// Visit the URL specified by the topic

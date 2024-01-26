@@ -2,8 +2,6 @@
   "name": "Discourse Alt New Topic Button",
   "component": true,
   "modifiers": {
-    "svg_icons": [
-      "plus"
-    ]
+    "svg_icons": ["plus"]
   }
 }
