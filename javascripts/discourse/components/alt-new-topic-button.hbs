@@ -1,0 +1,11 @@
+{{#if this.showButton}}
+<div class="fk-d-button-tooltip">
+    <DButton 
+        class="btn-default"
+        id="create-topic-alt"
+        @icon={{this.icon}}
+        @translatedLabel={{this.label}}
+        @action={{this.goToNewTopic}} 
+    />
+</div>
+{{/if}}
