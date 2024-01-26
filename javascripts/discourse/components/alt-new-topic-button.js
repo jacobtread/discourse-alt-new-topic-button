@@ -31,12 +31,12 @@ export default class AltNewTopicButton extends Component {
 
   // Retrieve the icon for the button
   get icon() {
-    return this.buttonData.icon ?? "plus";
+    return this.buttonData.icon.length > 0 ? this.buttonData.icon : "plus";
   }
 
   /// Retrieve the text for the button
   get label() {
-    return this.buttonData.text ?? "Alt New Topic";
+    return this.buttonData.text.length > 0 ? this.buttonData.text : "Alt New Topic";
   }
 
   /// Visit the URL specified by the topic
